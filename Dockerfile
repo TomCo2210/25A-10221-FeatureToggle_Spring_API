@@ -10,6 +10,7 @@ RUN ./gradlew bootJar
 FROM eclipse-temurin:21-jdk-alpine AS runner
 
 WORKDIR /app
-COPY --from=builder /build/libs/*.jar app.jar
+RUN ls -l
+COPY --from=builder /app/build/libs/*.jar app.jar
 
 CMD ["java", "-jar", "app.jar"] 
