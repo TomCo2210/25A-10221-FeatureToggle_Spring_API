@@ -1,5 +1,8 @@
 package dev.tomco.feature_toggle_spring_api;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class FeatureToggleConverter {
 
     public FeatureToggleBoundary convertPostBoundaryToBoundary(FeatureTogglePostBoundary postBoundary) {

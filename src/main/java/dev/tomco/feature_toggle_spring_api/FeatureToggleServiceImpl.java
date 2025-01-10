@@ -6,10 +6,13 @@ import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.stereotype.Service;
+
 import static org.springframework.data.mongodb.core.query.Criteria.*;
 import static org.springframework.data.mongodb.core.query.Query.*;
 import org.springframework.transaction.annotation.Transactional;
 
+@Service
 public class FeatureToggleServiceImpl implements FeatureToggleService {
 
     private FeatureToggleCRUD featureToggleCRUD;
