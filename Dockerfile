@@ -1,4 +1,4 @@
-FROM openjdk:17-jre-slim
+FROM openjdk:24-ea-21-jdk-slim
 
 RUN ./gradlew bootJar
 
